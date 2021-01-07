@@ -10,7 +10,7 @@ volumes:
 services:
   rabbitmq:
     image: busecolak/rabbitmq-consul
-    hostname: "{{.Node.Hostname}}"
+    hostname: "rabbit-{{.Node.Hostname}}"
     environment:
       - RABBITMQ_ERLANG_COOKIE="MY-SECRET-KEY-123"
     networks:
